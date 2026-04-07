@@ -8,7 +8,7 @@ class MemoryModule(nn.Module):
     def __init__(self, num_classes, feature_dim):
         super(MemoryModule, self).__init__()
         self.memory = nn.Parameter(torch.randn(num_classes, feature_dim), requires_grad=False)  # Memory matrix
-        self.memory_labels = [-1] * num_classes #  [i for i in range(5)
+        self.memory_labels = [-1] * num_classes # [i for i in range(5)]
         self.init_weights()
 
     def init_weights(self):
