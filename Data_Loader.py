@@ -1123,9 +1123,9 @@ def prepare_cifar(num_classes=5, samples_per_class=1, batch_size=128, seed=42):
 	test_subset = RemappedSubset(test_dataset, test_indices)
 
 	# Dataloaders (num_workers=0 for Windows compatibility)
-	train_loader = DataLoader(dataset=train_subset, batch_size=BATCH_SIZE, shuffle=True, num_workers=0)
-	eval_loader = DataLoader(dataset=val_subset, batch_size=BATCH_SIZE, shuffle=False, num_workers=0)
-	test_loader = DataLoader(dataset=test_subset, batch_size=BATCH_SIZE, shuffle=False, num_workers=0)
+	train_loader = DataLoader(dataset=train_subset, batch_size=BATCH_SIZE, shuffle=True, num_workers=4)
+	eval_loader = DataLoader(dataset=val_subset, batch_size=BATCH_SIZE, shuffle=False, num_workers=4)
+	test_loader = DataLoader(dataset=test_subset, batch_size=BATCH_SIZE, shuffle=False, num_workers=4)
 
 	print(f"Classes After Filter: {len(filtered_class_names)}")
 	print(f"Number of Classes Used: {NUM_CLASSES}")
