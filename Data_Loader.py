@@ -1027,7 +1027,7 @@ NAMES = [
 
 
 
-def prepare_cifar(num_classes=5, samples_per_class=5, batch_size=128, seed=42):
+def prepare_cifar(num_classes=5, samples_per_class=1, batch_size=128, seed=42):
 
 	# CIFAR-100 Dataset
 	# Parameters allow switching between 5-way N-shot configurations
