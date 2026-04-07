@@ -356,7 +356,7 @@ if __name__ == '__main__':
         # CRITICAL: Reload data with current seed
         # This ensures different class splits/samples for each episode
         print(f"Loading CIFAR100 dataset with seed {seed}...")
-        train_loader, eval_loader, test_loader, NUM_CLASSES = Data_Loader.prepare_cifar(num_classes=5, samples_per_class=5, seed=seed)
+        train_loader, eval_loader, test_loader, NUM_CLASSES = Data_Loader.prepare_cifar(num_classes=5, samples_per_class=1, seed=seed)
         
         # CRITICAL: Reload pretrained backbone at start of each episode
         # Per paper: "reload the pretrained backbone at the start of each episode"
