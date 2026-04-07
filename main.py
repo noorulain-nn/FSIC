@@ -42,7 +42,7 @@ if torch.cuda.is_available():
 
 # Constants
 NUM_CLASSES = 5  # Number of classes in ImageNet OR CIFAR-100
-FEATURE_DIM = 512  # Placeholder; actual dim auto-detected from backbone (2208 for DenseNet161)
+FEATURE_DIM = 2208  # Placeholder; actual dim auto-detected from backbone (2208 for DenseNet161)
 BATCH_SIZE = 128  # Per Table 3 of APM paper
 NUM_EPOCHS = 10  # Per Table 3 of APM paper (Epochs per Episode)
 LEARNING_RATE = 0.001 # Per Table 3 of APM paper
